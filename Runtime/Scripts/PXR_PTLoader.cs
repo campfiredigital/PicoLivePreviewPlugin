@@ -136,12 +136,16 @@ namespace Unity.XR.PICO.LivePreview
 
         public override bool Stop()
         {
+#if UNITY_EDITOR
+            return true;
+#else
 #if XR_HANDS
             StopSubsystem<XRHandSubsystem>();
 #endif
             StopSubsystem<XRInputSubsystem>();
             StopSubsystem<XRDisplaySubsystem>();
             return true;
+#endif
         }
 
         public override bool Deinitialize()
