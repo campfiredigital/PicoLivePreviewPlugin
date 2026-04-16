@@ -146,13 +146,11 @@ namespace Unity.XR.PICO.LivePreview
 
         public override bool Deinitialize()
         {
-            /* Uncomment if Unity keeps crashing in the editor when stopping the subsystems
 #if UNITY_EDITOR
             // Destroy nothing to avoid PICO C++ crash in the editor
             return true; 
 #else
             // On the headset, we can safely destroy the subsystems
-            */
 #if XR_HANDS
             DestroySubsystem<XRHandSubsystem>();
 #endif
