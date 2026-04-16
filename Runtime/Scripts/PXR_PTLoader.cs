@@ -157,6 +157,7 @@ namespace Unity.XR.PICO.LivePreview
             DestroySubsystem<XRInputSubsystem>();
             DestroySubsystem<XRDisplaySubsystem>();
             return true;
+#endif
         }
 
 #if UNITY_EDITOR
